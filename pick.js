@@ -1,10 +1,11 @@
 "use strict"
-const R = require('ramda')
 const Combinatorics = require('js-combinatorics');
+
+const deepEqual = (o1, o2) => JSON.stringify(o1) === JSON.stringify(o2)
 
 const isMatch = (fn, input, out) => {
     try {
-      return R.equals(fn(...input), out)
+      return deepEqual(fn(...input), out)
     }
     catch (e) {
       return false
@@ -21,7 +22,7 @@ const pick = (lib, rawInput, out) => {
   return fns.filter(key => {
     const fn = lib[key]
     const correctArityInputs = onlyOfLength(fn.length, possibleInputs)
-    return R.any(input => isMatch(fn, input, out), correctArityInputs)
+    return correctArityInputs.reduce(((prev, curr) => isMatch(fn, curr, out) || prev), false)
   })
 }
 

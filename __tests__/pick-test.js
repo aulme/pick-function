@@ -11,9 +11,13 @@ describe("pick", () => {
 
   it("handles functions that may crash the runtime with bad arguments, e.g. R.unfold");
 
-  it("finds functions that take callbacks", () => {
+  it("finds higher order functions", () => {
     return expect(pick(R, [[1, 3], x => x + 10], [11, 13]))
       .toEqual(['chain', 'map'])
+  });
+
+  it("finds that nothing matches", () => {
+    return expect(pick(R, [1, 16], 20)).toEqual([])
   });
 
   it("finds that R.add can add 1 and 5 and get 7", () => {
