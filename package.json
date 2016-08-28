@@ -9,10 +9,10 @@
   "author": "Aleksandrs Ulme",
   "license": "MIT",
   "dependencies": {
-    "js-combinatorics": "^0.5.2",
-    "ramda": "^0.21.0"
+    "js-combinatorics": "^0.5.2"
   },
   "devDependencies": {
-    "jest": "^14.1.0"
+    "jest": "^14.1.0",
+    "ramda": "^0.21.0"
   }
 }
