@@ -1,6 +1,6 @@
 {
   "name": "pick-function",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Find functions by inputs and outputs.",
   "main": "./dist/pick.js",
   "scripts": {
