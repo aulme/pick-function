@@ -1,6 +1,6 @@
 {
   "name": "pick-function",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Find functions by inputs and outputs.",
   "main": "dist.js",
   "scripts": {
@@ -17,7 +17,6 @@
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
-    "jest": "^14.1.0",
     "webpack": "^1.13.1",
     "ramda": "^0.21.0"
   }
