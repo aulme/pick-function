@@ -26,4 +26,4 @@ const pick = (lib, rawInput, out) => {
   })
 }
 
-module.exports = pick
+export default pick
